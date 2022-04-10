@@ -1,0 +1,7 @@
+{
+  "mintedSuccessfully": "Minted successfully",
+  "wrongChain": "Wrong chain. Please change a chain",
+  "copyToClipboardSuccess": "Successfully copied to clipboard",
+  "missingMetamask": "MetaMask is not available",
+  "error": "An error occured, please try again"
+}

@@ -1,0 +1,10 @@
+html,
+body,
+#__next {
+  height: 100%;
+}
+
+*::selection {
+  background: #d50000;
+  color: #ffffff;
+}

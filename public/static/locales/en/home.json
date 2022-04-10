@@ -1,0 +1,8 @@
+{
+  "title": "Welcome to Yuppify",
+  "mintedCossack": "You just minted a new Cossack!",
+  "connectToMint": "Connect Wallet for Mint",
+  "mintWithoutConnect": "Or just mint it without wallet connection through QR code",
+  "description1": "Our Cossacks collection is created to help Ukrainian people with russian aggression.",
+  "description2": "100% of the proceeds will be sent to <cbaLink>Come Back Alive</cbaLink> wallet address. You can check the <smartContractLink>Smart Contract</smartContractLink> for more details"
+}
