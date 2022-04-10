@@ -13,7 +13,7 @@ interface IProps {
   emotionCache: EmotionCache;
 }
 
-export const MainLayout: React.FC<IProps> = (props) => (
+export const MainLayout: React.ComponentType<IProps> = (props) => (
   <StyledEngineProvider injectFirst>
     <CacheProvider value={props.emotionCache}>
       <MUIThemeProvider theme={MUITheme}>

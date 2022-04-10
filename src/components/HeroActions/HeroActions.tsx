@@ -6,7 +6,7 @@ import { Link } from "$components/Link";
 import { Trans } from "$components/Trans";
 import { MintButton } from "$components/MintButton";
 import { useTranslation } from "$hooks/useTranslation";
-import { UKR_GOV_TWITTER, SMART_CONTRACT_LINK } from "$constants/config";
+import { CBA_LINK, SMART_CONTRACT_LINK } from "$constants/config";
 import { useWeb3Context } from "$contexts/Web3Provider";
 import { ConnectWalletButton } from "$components/ConnectWalletButton";
 
@@ -26,7 +26,7 @@ export const HeroActions = () => {
             t={t}
             i18nKey="description2"
             components={{
-              govLink: <Link href={UKR_GOV_TWITTER} target="_blank" />,
+              cbaLink: <Link href={CBA_LINK} target="_blank" />,
               smartContractLink: <Link href={SMART_CONTRACT_LINK} target="_blank" />,
             }}
           />

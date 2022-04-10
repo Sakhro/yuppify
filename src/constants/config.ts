@@ -24,7 +24,7 @@ export const RPCS = IS_DEV_ENV ? DEV_RPCs : PROD_RPCs;
 export const REPO_URL = "https://github.com/Sakhro/yuppify";
 export const TWITTER_URL = "https://twitter.com/yuppifyio";
 
-export const UKR_GOV_TWITTER = "https://twitter.com/Ukraine/status/1497594592438497282?s=20&t=WT0-uDWu339j2qxJYTwhCw";
+export const CBA_LINK = "https://www.comebackalive.in.ua/donate";
 
 const PROD_CURRENCY_SYMBOL = "BNB";
 const DEV_CURRENCY_SYMBOL = "tBNB";
