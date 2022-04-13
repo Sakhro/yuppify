@@ -26,7 +26,7 @@ export const useNftModal = () => {
     };
 
     getTokenUri();
-    queryMinted(contract);
+    queryMinted();
   }, [mintedTokenId, contract, queryMinted]);
 
   useEffect(() => {

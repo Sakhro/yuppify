@@ -43,3 +43,8 @@ export const INFURA_IPFS_GATEWAY = "https://infura-ipfs.io/ipfs/";
 export const MORALIS_IPFS_GATEWAY = "https://ipfs.moralis.io:2053/ipfs/";
 
 export const PROJECT_WALLET_ADDRESS = "0x4C7166ae66d187d96EEc8d171B34bB9F066f33D2";
+
+export const MORALIS_API_URL = process.env.NEXT_PUBLIC_MORALIS_API_URL as string;
+export const MORALIS_API_KEY = process.env.NEXT_PUBLIC_MORALIS_API_KEY as string;
+
+export const MAX_COSSACKS_SUPPLY = 450;
