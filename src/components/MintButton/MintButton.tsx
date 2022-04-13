@@ -19,7 +19,7 @@ export const MintButton = () => {
       <Typography gutterBottom>
         {t("minted")}: {minted} | {total}
       </Typography>
-      <LoadingButton fullWidth variant="contained" onClick={handleMint} sx={{ mb: 2 }} loading={isLoading}>
+      <LoadingButton fullWidth variant="contained" onClick={handleMint} loading={isLoading}>
         {t("mint")} {NFT_PRICE} {DEFAULT_CURRENCY_SYMBOL}
       </LoadingButton>
       <MintedNFTModal />

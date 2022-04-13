@@ -42,7 +42,7 @@ export const Header = () => {
             {isUpSm && (
               <Grid item xs>
                 <Typography variant="h5" fontWeight={700}>
-                  {t("yuppify").toUpperCase()}
+                  {t("yuppify")}
                 </Typography>
               </Grid>
             )}

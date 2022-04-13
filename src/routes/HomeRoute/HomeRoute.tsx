@@ -1,12 +1,12 @@
 import type { NextPage } from "next";
 import Grid from "@mui/material/Grid";
 
-import { PageLayout } from "$layouts/PageLayout";
-import { HeroActions } from "$components/HeroActions";
-import { HeroImage } from "$components/HeroImage";
-import { ContractProvider } from "$contexts/ContractProvider";
 import { QrCode } from "$components/QrCode";
+import { PageLayout } from "$layouts/PageLayout";
+import { HeroImage } from "$components/HeroImage";
+import { HeroActions } from "$components/HeroActions";
 import { flexAlignCenterStyles } from "$constants/styles";
+import { ContractProvider } from "$contexts/ContractProvider";
 
 export const HomeRoute: NextPage = () => (
   <PageLayout>
@@ -17,7 +17,7 @@ export const HomeRoute: NextPage = () => (
         </Grid>
         <Grid item xs={12} md={6} sx={flexAlignCenterStyles}>
           <Grid container spacing={2}>
-            <Grid item xs={12}>
+            <Grid item xs={12} pb={2}>
               <HeroActions />
             </Grid>
             <Grid item xs={12}>
