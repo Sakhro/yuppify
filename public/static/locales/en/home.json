@@ -3,7 +3,7 @@
   "mintedCossack": "You just minted a new Cossack!",
   "connectToMint": "Connect Wallet for Mint",
   "mintWithoutConnect": "Or just mint it without wallet connection through QR code to purchase or send 0.05 BNB to contract address",
-  "description1": "This collection is created to help Ukrainian people withstand from russian aggression.",
+  "description1": "This collection is created to help Ukrainian people withstand russian aggression.",
   "description2": "100% of the proceeds will be sent to <cbaLink>Come Back Alive</cbaLink> wallet address. You can check our <smartContractLink>Smart Contract</smartContractLink> for more details",
   "allMinted": "All NFT's are minted. Thank you all for your support! For more details check our <twitterLink>twitter</twitterLink> account."
 }
