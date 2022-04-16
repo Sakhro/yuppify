@@ -39,8 +39,7 @@ const PROD_SMART_CONTRACT_LINK = `https://bscscan.com/address/${CONTRACT_ADDRESS
 
 export const SMART_CONTRACT_LINK = IS_DEV_ENV ? DEV_SMART_CONTRACT_LINK : PROD_SMART_CONTRACT_LINK;
 
-export const INFURA_IPFS_GATEWAY = "https://infura-ipfs.io/ipfs/";
-export const MORALIS_IPFS_GATEWAY = "https://ipfs.moralis.io:2053/ipfs/";
+export const INFURA_IPFS_GATEWAY = "https://prexsell.infura-ipfs.io/ipfs/";
 
 export const PROJECT_WALLET_ADDRESS = "0x4C7166ae66d187d96EEc8d171B34bB9F066f33D2";
 

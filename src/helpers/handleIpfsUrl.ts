@@ -1,3 +1,3 @@
-import { MORALIS_IPFS_GATEWAY } from "$constants/config";
+import { INFURA_IPFS_GATEWAY } from "$constants/config";
 
-export const handleIpfsUrl = (url: string) => url.replace("ipfs://", MORALIS_IPFS_GATEWAY);
+export const handleIpfsUrl = (url: string) => url.replace("ipfs://", INFURA_IPFS_GATEWAY);
