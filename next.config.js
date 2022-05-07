@@ -5,7 +5,7 @@ const nextConfig = {
   i18n,
   reactStrictMode: true,
   images: {
-    domains: ["prexsell.infura-ipfs.io"],
+    domains: ["prexsell-staging.infura-ipfs.io"],
   },
 };
 

@@ -1,0 +1,1 @@
+export { CollectionNfts } from "./CollectionNfts";

@@ -8,6 +8,7 @@ import { Web3Provider } from "$contexts/Web3Provider";
 import { UserProvider } from "$contexts/UserProvider";
 import { SnackbarProvider } from "$components/EnhancedSnackbar/context";
 import { MaintenanceLayout } from "$layouts/MaintenanceLayout";
+import { ContractProvider } from "$contexts/ContractProvider";
 
 interface IProps {
   emotionCache: EmotionCache;
@@ -21,7 +22,9 @@ export const MainLayout: React.ComponentType<IProps> = (props) => (
         <MaintenanceLayout>
           <UserProvider>
             <Web3Provider>
-              <SnackbarProvider>{props.children}</SnackbarProvider>
+              <ContractProvider>
+                <SnackbarProvider>{props.children}</SnackbarProvider>
+              </ContractProvider>
             </Web3Provider>
           </UserProvider>
         </MaintenanceLayout>

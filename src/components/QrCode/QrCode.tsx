@@ -5,11 +5,11 @@ import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 
 import { Link } from "$components/Link";
-import { CONTRACT_ADDRESS, DEFAULT_CHAIN_ID } from "$constants/config";
+import { COSSACKS_CONTRACT_ADDRESS, DEFAULT_CHAIN_ID } from "$constants/config";
 import { useTranslation } from "$hooks/useTranslation";
 
-const TW_QR_LINK = `https://link.trustwallet.com/send?asset=c20000714&address=${CONTRACT_ADDRESS}&amount=0.05`;
-const MM_QR_LINK = `https://metamask.app.link/send/${CONTRACT_ADDRESS}@${DEFAULT_CHAIN_ID}?value=5e16`;
+const TW_QR_LINK = `https://link.trustwallet.com/send?asset=c20000714&address=${COSSACKS_CONTRACT_ADDRESS}&amount=0.05`;
+const MM_QR_LINK = `https://metamask.app.link/send/${COSSACKS_CONTRACT_ADDRESS}@${DEFAULT_CHAIN_ID}?value=5e16`;
 
 const TWQRCode = () => (
   <QRCode

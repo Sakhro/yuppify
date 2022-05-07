@@ -5,19 +5,20 @@ import { PageLayout } from "$layouts/PageLayout";
 import { HeroImage } from "$components/HeroImage";
 import { HeroActions } from "$components/HeroActions";
 import { flexAlignCenterStyles } from "$constants/styles";
-import { ContractProvider } from "$contexts/ContractProvider";
+import { CollectionNfts } from "$components/CollectionNfts";
 
 export const HomeRoute: NextPage = () => (
   <PageLayout>
-    <ContractProvider>
-      <Grid container spacing={6}>
-        <Grid item xs={12} md={6}>
-          <HeroImage />
-        </Grid>
-        <Grid item xs={12} md={6} sx={flexAlignCenterStyles}>
-          <HeroActions />
-        </Grid>
+    <Grid container spacing={6}>
+      <Grid item xs={12} md={6}>
+        <HeroImage />
       </Grid>
-    </ContractProvider>
+      <Grid item xs={12} md={6} sx={flexAlignCenterStyles}>
+        <HeroActions />
+      </Grid>
+      <Grid item xs={12}>
+        <CollectionNfts />
+      </Grid>
+    </Grid>
   </PageLayout>
 );

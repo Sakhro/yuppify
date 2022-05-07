@@ -32,14 +32,14 @@ const DEV_CURRENCY_SYMBOL = "tBNB";
 export const DEFAULT_CURRENCY_SYMBOL = IS_DEV_ENV ? DEV_CURRENCY_SYMBOL : PROD_CURRENCY_SYMBOL;
 export const NFT_PRICE = 0.05;
 
-export const CONTRACT_ADDRESS = "0x4dB15d4E3fD60EFb41EF9f593f959aF9172D36b9";
+export const COSSACKS_CONTRACT_ADDRESS = "0x4dB15d4E3fD60EFb41EF9f593f959aF9172D36b9";
 
-const DEV_SMART_CONTRACT_LINK = `https://testnet.bscscan.com/address/${CONTRACT_ADDRESS}`;
-const PROD_SMART_CONTRACT_LINK = `https://bscscan.com/address/${CONTRACT_ADDRESS}`;
+const DEV_SMART_CONTRACT_LINK = `https://testnet.bscscan.com/address/${COSSACKS_CONTRACT_ADDRESS}`;
+const PROD_SMART_CONTRACT_LINK = `https://bscscan.com/address/${COSSACKS_CONTRACT_ADDRESS}`;
 
 export const SMART_CONTRACT_LINK = IS_DEV_ENV ? DEV_SMART_CONTRACT_LINK : PROD_SMART_CONTRACT_LINK;
 
-export const INFURA_IPFS_GATEWAY = "https://prexsell.infura-ipfs.io/ipfs/";
+export const INFURA_IPFS_GATEWAY = "https://prexsell-staging.infura-ipfs.io/ipfs/";
 
 export const PROJECT_WALLET_ADDRESS = "0x4C7166ae66d187d96EEc8d171B34bB9F066f33D2";
 

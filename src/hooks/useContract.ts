@@ -2,7 +2,7 @@ import { useMemo } from "react";
 import { ethers } from "ethers";
 
 import ContractABI from "$static/ContractABI.json";
-import { CONTRACT_ADDRESS } from "$constants/config";
+import { COSSACKS_CONTRACT_ADDRESS } from "$constants/config";
 import { useWeb3Context } from "$contexts/Web3Provider";
 
 export const useContract = () => {
@@ -12,7 +12,7 @@ export const useContract = () => {
     if (!provider) return;
 
     const signer = provider.getSigner();
-    const contract = new ethers.Contract(CONTRACT_ADDRESS, ContractABI, signer);
+    const contract = new ethers.Contract(COSSACKS_CONTRACT_ADDRESS, ContractABI, signer);
 
     return contract;
   }, [provider]);

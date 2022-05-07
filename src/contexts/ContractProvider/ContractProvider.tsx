@@ -5,7 +5,7 @@ import pathOr from "ramda/src/pathOr";
 
 import { axios } from "$services/axios";
 import { createContext } from "$helpers/createContext";
-import { CONTRACT_ADDRESS } from "$constants/config";
+import { COSSACKS_CONTRACT_ADDRESS } from "$constants/config";
 
 interface IContractContext {
   minted: number;
@@ -21,7 +21,9 @@ export const ContractProvider: React.FC = (props) => {
   const [minted, setMinted] = React.useState(0);
 
   const queryMinted = React.useCallback(
-    compose(andThen(compose(setMinted, pathOr(0, ["data", "total"]))), () => axios(`/api/nft/${CONTRACT_ADDRESS}`)),
+    compose(andThen(compose(setMinted, pathOr(0, ["data", "total"]))), () =>
+      axios(`/api/${COSSACKS_CONTRACT_ADDRESS}/nft`)
+    ),
     []
   );
 

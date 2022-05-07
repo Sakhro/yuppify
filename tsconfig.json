@@ -28,6 +28,7 @@
       "$routes/*": ["./src/routes/*"],
       "$UI/*": ["./src/UI/*"],
       "$types/*": ["./src/types/*"],
+      "$db/*": ["./db/*"],
       "$hooks/*": ["./src/hooks/*"],
       "$images/*": ["./public/static/images/*"],
       "$static/*": ["./public/static/*"]
