@@ -11,7 +11,7 @@ import { NextApiRequest, NextApiResponse } from "next";
 import { COSSACKS_CONTRACT_ADDRESS } from "$constants/config";
 
 const CONTRACT_DB_MAP: Record<string, string> = {
-  [COSSACKS_CONTRACT_ADDRESS]: `${appRoot}/public/static/db/cossacks.sqlite`,
+  [COSSACKS_CONTRACT_ADDRESS]: "/static/db/cossacks.sqlite",
 };
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
