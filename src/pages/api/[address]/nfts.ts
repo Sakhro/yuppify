@@ -11,10 +11,11 @@ import { NextApiRequest, NextApiResponse } from "next";
 
 import { COSSACKS_CONTRACT_ADDRESS } from "$constants/config";
 
-const CONTRACT_DB_MAP: Record<string, string> = {
-  [COSSACKS_CONTRACT_ADDRESS]: fs.readFileSync(
-    path.join(__dirname, "..", "..", "..", "..", "..", "_files", "cossacks.sqlite")
-  ) as any,
+const dbDirectory = path.resolve(process.cwd(), "db");
+const cossacksFile = fs.readFileSync(path.join(dbDirectory, "cossacks.sqlite"));
+
+const CONTRACT_DB_MAP: Record<string, any> = {
+  [COSSACKS_CONTRACT_ADDRESS]: cossacksFile,
 };
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
