@@ -1,6 +1,6 @@
 {
   "functions": {
-    "api/[address]/nfts.ts": {
+    "src/pages/api/[address]/nfts.ts": {
       "includeFiles": "_files/**"
     }
   }
