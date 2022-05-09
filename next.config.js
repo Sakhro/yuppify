@@ -6,7 +6,7 @@ const nextConfig = {
   outputFileTracing: true,
   reactStrictMode: true,
   images: {
-    domains: ["prexsell-staging.infura-ipfs.io"],
+    domains: ["prexsell-staging.infura-ipfs.io", "ipfs.moralis.io"],
   },
 };
 
