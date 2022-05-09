@@ -4,7 +4,7 @@ import Typography from "@mui/material/Typography";
 
 import { useTranslation } from "$hooks/useTranslation";
 import { CollectionCard, CollectionCardPlaceholder } from "$components/CollectionCard";
-import { SortCollectionBySelect } from "$components/SortCollectionBySelect";
+import { FilterCollectionBySelect } from "$components/FilterCollectionBySelect";
 
 import { useCollectionNfts } from "./useCollectionNfts";
 
@@ -19,7 +19,7 @@ export const CollectionNfts = () => {
           <Typography variant="h5">{t("allCollectionNfts")}</Typography>
         </Grid>
         <Grid item minWidth={300}>
-          <SortCollectionBySelect />
+          <FilterCollectionBySelect />
         </Grid>
       </Grid>
       <Grid item container spacing={4}>

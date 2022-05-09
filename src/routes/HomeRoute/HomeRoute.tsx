@@ -6,7 +6,7 @@ import { HeroImage } from "$components/HeroImage";
 import { HeroActions } from "$components/HeroActions";
 import { flexAlignCenterStyles } from "$constants/styles";
 import { CollectionNfts } from "$components/CollectionNfts";
-import { CollectionSortingProvider } from "$components/SortCollectionBySelect/context";
+import { FilterCollectionByProvider } from "$components/FilterCollectionBySelect/context";
 
 export const HomeRoute: NextPage = () => (
   <PageLayout>
@@ -18,9 +18,9 @@ export const HomeRoute: NextPage = () => (
         <HeroActions />
       </Grid>
       <Grid item xs={12}>
-        <CollectionSortingProvider>
+        <FilterCollectionByProvider>
           <CollectionNfts />
-        </CollectionSortingProvider>
+        </FilterCollectionByProvider>
       </Grid>
     </Grid>
   </PageLayout>

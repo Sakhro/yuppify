@@ -5,6 +5,7 @@
   "connectToMint": "Connect Wallet to Mint",
   "tokenId": "Token Id",
   "sortBy": "Sort By",
+  "filterBy": "Filter By",
   "rarity": "Rarity",
   "mintWithoutConnect": "Or just mint it without wallet connection through QR code to purchase or send 0.05 BNB to contract address",
   "description1": "This collection is created to help Ukrainian people withstand russian aggression.",

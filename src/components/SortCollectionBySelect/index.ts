@@ -1,1 +1,0 @@
-export { SortCollectionBySelect } from "./SortCollectionBySelect";

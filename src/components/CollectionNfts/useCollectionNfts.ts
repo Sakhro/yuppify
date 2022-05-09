@@ -5,17 +5,17 @@ import pathOr from "ramda/src/pathOr";
 import { axios } from "$services/axios";
 import { ICollectionNft } from "$constants/types";
 import { COSSACKS_CONTRACT_ADDRESS } from "$constants/config";
-import { SortBy, useCollectionSortingContext } from "$components/SortCollectionBySelect/context";
 import { useContractContext } from "$contexts/ContractProvider";
+import { FilterBy, useFilterCollectionByContext } from "$components/FilterCollectionBySelect/context";
 
 const queryNfts = () => axios.get<ICollectionNft[]>(`/api/${COSSACKS_CONTRACT_ADDRESS}/nfts`);
 
-const sortNfts = (sortBy: SortBy, minted: number) => (nfts: ICollectionNft[]) => {
-  if (sortBy === SortBy.Id) {
+const sortNfts = (filterBy: FilterBy, minted: number) => (nfts: ICollectionNft[]) => {
+  if (filterBy === FilterBy.Id) {
     return nfts.filter((nft) => nft.id <= minted);
   }
 
-  if (sortBy === SortBy.Rarity) {
+  if (filterBy === FilterBy.Rarity) {
     return nfts;
   }
 
@@ -24,22 +24,22 @@ const sortNfts = (sortBy: SortBy, minted: number) => (nfts: ICollectionNft[]) =>
 
 export const useCollectionNfts = () => {
   const { minted } = useContractContext();
-  const { sortBy } = useCollectionSortingContext();
+  const { filterBy } = useFilterCollectionByContext();
   const [isLoading, setIsLoading] = useState(false);
   const [collectionNfts, setCollectionNfts] = useState<ICollectionNft[]>([]);
 
   const startLoading = () => setIsLoading(true);
   const stopLoading = () => setIsLoading(false);
 
-  const sortByMinted = useCallback(sortNfts(sortBy, minted), [sortBy, minted]);
+  const filterNfts = useCallback(sortNfts(filterBy, minted), [filterBy, minted]);
 
   const queryCollectionNfts = useCallback(
     compose(
-      andThen(compose(stopLoading, setCollectionNfts, sortByMinted, pathOr([], ["data"]))),
+      andThen(compose(stopLoading, setCollectionNfts, filterNfts, pathOr([], ["data"]))),
       queryNfts,
       startLoading
     ),
-    [sortByMinted]
+    [filterNfts]
   );
 
   useEffect(() => {
