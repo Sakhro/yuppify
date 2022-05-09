@@ -13,7 +13,7 @@ export const MintButton = () => {
 
   return (
     <>
-      <LoadingButton fullWidth variant="contained" onClick={handleMint} loading={isLoading}>
+      <LoadingButton variant="contained" onClick={handleMint} loading={isLoading}>
         {t("mint")} {NFT_PRICE} {DEFAULT_CURRENCY_SYMBOL}
       </LoadingButton>
       <MintedNFTModal />

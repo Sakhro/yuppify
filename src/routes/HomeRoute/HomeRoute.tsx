@@ -2,20 +2,15 @@ import type { NextPage } from "next";
 import Grid from "@mui/material/Grid";
 
 import { PageLayout } from "$layouts/PageLayout";
-import { HeroImage } from "$components/HeroImage";
-import { HeroActions } from "$components/HeroActions";
-import { flexAlignCenterStyles } from "$constants/styles";
 import { CollectionNfts } from "$components/CollectionNfts";
 import { FilterCollectionByProvider } from "$components/FilterCollectionBySelect/context";
+import { CollectionHeader } from "$components/CollectionHeader";
 
 export const HomeRoute: NextPage = () => (
   <PageLayout>
     <Grid container spacing={6}>
-      <Grid item xs={12} md={6}>
-        <HeroImage />
-      </Grid>
-      <Grid item xs={12} md={6} sx={flexAlignCenterStyles}>
-        <HeroActions />
+      <Grid item xs={12}>
+        <CollectionHeader />
       </Grid>
       <Grid item xs={12}>
         <FilterCollectionByProvider>

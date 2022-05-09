@@ -14,7 +14,7 @@ export const CollectionNfts = () => {
 
   return (
     <Grid container spacing={4}>
-      <Grid item container>
+      <Grid item container spacing={2}>
         <Grid item xs>
           <Typography variant="h5">{t("allCollectionNfts")}</Typography>
         </Grid>

@@ -31,12 +31,14 @@ export const QrCode = () => {
   const { t } = useTranslation("home");
 
   return (
-    <Grid container spacing={2}>
+    <Grid container spacing={2} justifyContent="center">
       <Grid item xs={12}>
-        <Typography gutterBottom>{t("mintWithoutConnect")}:</Typography>
+        <Typography align="center" gutterBottom>
+          {t("mintWithoutConnect")}:
+        </Typography>
       </Grid>
       {isMobile && (
-        <Grid item container spacing={8}>
+        <Grid item container spacing={4} justifyContent="center">
           <Grid item>
             <Link href={TW_QR_LINK}>
               <TWQRCode />
@@ -50,7 +52,7 @@ export const QrCode = () => {
         </Grid>
       )}
       {!isMobile && (
-        <Grid item container spacing={8}>
+        <Grid item container spacing={4} justifyContent="center">
           <Grid item>
             <TWQRCode />
           </Grid>

@@ -15,7 +15,7 @@ export const PageLayout: React.FC = (props) => (
       <Grid item>
         <Toolbar />
       </Grid>
-      <Grid item xs pb={3} px={3} component="main">
+      <Grid item xs py={2} px={3} component="main">
         {props.children}
       </Grid>
       <Grid item p={3}>

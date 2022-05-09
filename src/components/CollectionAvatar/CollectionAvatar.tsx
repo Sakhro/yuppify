@@ -8,7 +8,7 @@ import Box from "@mui/material/Box";
 
 import { Image } from "$components/Image";
 
-export const HeroImage = () => {
+export const CollectionAvatar = () => {
   const [index, setIndex] = React.useState(1);
 
   React.useEffect(() => {
