@@ -3,8 +3,8 @@ import React from "react";
 import { createContext } from "$helpers/createContext";
 
 export const enum FilterBy {
-  Rarity = "Rarity",
-  Id = "Id",
+  All = "All",
+  Minted = "Minted",
 }
 
 interface IFilterCollectionByContext {
@@ -15,7 +15,7 @@ interface IFilterCollectionByContext {
 const [FilterCollectionByContext, useFilterCollectionByContext] = createContext<IFilterCollectionByContext>();
 
 export const FilterCollectionByProvider: React.FC = (props) => {
-  const [filterBy, setFilterBy] = React.useState(FilterBy.Id);
+  const [filterBy, setFilterBy] = React.useState(FilterBy.Minted);
 
   const value = React.useMemo(
     () => ({

@@ -11,11 +11,11 @@ import { FilterBy, useFilterCollectionByContext } from "$components/FilterCollec
 const queryNfts = () => axios.get<ICollectionNft[]>(`/api/${COSSACKS_CONTRACT_ADDRESS}/nfts`);
 
 const sortNfts = (filterBy: FilterBy, minted: number) => (nfts: ICollectionNft[]) => {
-  if (filterBy === FilterBy.Id) {
+  if (filterBy === FilterBy.Minted) {
     return nfts.filter((nft) => nft.id <= minted);
   }
 
-  if (filterBy === FilterBy.Rarity) {
+  if (filterBy === FilterBy.All) {
     return nfts;
   }
 

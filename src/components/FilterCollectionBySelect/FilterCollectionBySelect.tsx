@@ -19,8 +19,8 @@ export const FilterCollectionBySelect = () => {
     <FormControl fullWidth size="small">
       <InputLabel id="sort-by-id-label">{t("filterBy")}</InputLabel>
       <Select value={filterBy} label={t("filterBy")} onChange={handleChange} labelId="sort-by-id-label">
-        <MenuItem value={FilterBy.Id}>{t("tokenId")}</MenuItem>
-        <MenuItem value={FilterBy.Rarity}>{t("rarity")}</MenuItem>
+        <MenuItem value={FilterBy.Minted}>{t("minted")}</MenuItem>
+        <MenuItem value={FilterBy.All}>{t("all")}</MenuItem>
       </Select>
     </FormControl>
   );
