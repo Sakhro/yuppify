@@ -4,6 +4,8 @@ import Typography from "@mui/material/Typography";
 
 import { useTranslation } from "$hooks/useTranslation";
 import { CollectionCard, CollectionCardPlaceholder } from "$components/CollectionCard";
+import { SortCollectionBySelect } from "$components/SortCollectionBySelect";
+
 import { useCollectionNfts } from "./useCollectionNfts";
 
 export const CollectionNfts = () => {
@@ -12,13 +14,17 @@ export const CollectionNfts = () => {
 
   return (
     <Grid container spacing={4}>
-      <Grid item xs={12}>
-        <Typography variant="h5">{t("allCollectionNfts")}</Typography>
+      <Grid item container>
+        <Grid item xs>
+          <Typography variant="h5">{t("allCollectionNfts")}</Typography>
+        </Grid>
+        <Grid item minWidth={300}>
+          <SortCollectionBySelect />
+        </Grid>
       </Grid>
       <Grid item container spacing={4}>
         {collectionNfts.map((nft) => (
           <Grid item xs={12} sm={6} md={4} lg={3} key={nft.id}>
-            {/* TODO: fix id in db */}
             <CollectionCard nft={nft} />
           </Grid>
         ))}

@@ -32,6 +32,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       offset,
     });
 
+    // TODO: fix id in db
     res.status(200).json(nfts.map(over(lensProp("id"), inc)));
   } catch (error) {
     console.log(error);

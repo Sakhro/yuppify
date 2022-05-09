@@ -72,7 +72,12 @@ export const CollectionCard: React.FC<IProps> = (props) => {
         </StyledImageWrapper>
       </Grid>
       <Grid item xs={12}>
-        <Typography align="center" variant="h6">
+        {isMinted && (
+          <Typography align="center" variant="h5">
+            {props.nft.name}
+          </Typography>
+        )}
+        <Typography align="center" variant="h6" color="text.secondary">
           Rarity Rank: {props.nft.rarity_rank}
         </Typography>
       </Grid>
