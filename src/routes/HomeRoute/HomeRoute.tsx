@@ -5,6 +5,7 @@ import { PageLayout } from "$layouts/PageLayout";
 import { CollectionNfts } from "$components/CollectionNfts";
 import { FilterCollectionByProvider } from "$components/FilterCollectionBySelect/context";
 import { CollectionHeader } from "$components/CollectionHeader";
+import { SortCollectionByProvider } from "$components/SortCollectionBySelect/context";
 
 export const HomeRoute: NextPage = () => (
   <PageLayout>
@@ -14,7 +15,9 @@ export const HomeRoute: NextPage = () => (
       </Grid>
       <Grid item xs={12}>
         <FilterCollectionByProvider>
-          <CollectionNfts />
+          <SortCollectionByProvider>
+            <CollectionNfts />
+          </SortCollectionByProvider>
         </FilterCollectionByProvider>
       </Grid>
     </Grid>

@@ -46,7 +46,7 @@ export const CollectionHeader = () => {
       </Grid>
       <Grid item xs={12} mt={10}>
         <Typography gutterBottom align="center" variant="h4" fontWeight={700}>
-          Cossacks Collection
+          Cossacks
         </Typography>
         <Typography gutterBottom align="center">
           {t("home:description1")}
